@@ -1,0 +1,12 @@
+<h1>Registrácia</h1>
+
+<form method="post">
+    Meno<br />
+    <input type="text" name="name" /><br />
+    Heslo<br />
+    <input type="password" name="password" /><br />
+    Heslo znovu<br />
+    <input type="password" name="password_control" /><br />
+    <?= $this->getCaptcha() ?>
+    <input type="submit" value="Registrovat" />
+</form>

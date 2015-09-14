@@ -1,0 +1,10 @@
+<h1>Kontaktný formulár</h1>
+
+<p>Kontaktujte nás odoslaním formulára.</p>
+<form method="post" id="form-email">
+    Vaša emailová adresa<br />
+        <input type="email" name="address" required="required" value="<?php if (isset($_POST['address'])) echo(htmlspecialchars($_POST['address'])); ?>" /><br />
+        <?= $this->getCaptcha() ?><br />
+        <textarea name="text"><?php if (isset($_POST['text'])) echo(htmlspecialchars($_POST['text'])); ?></textarea><br />
+<input type="submit" value="Odoslať" />
+</form>
